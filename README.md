@@ -19,3 +19,8 @@ Based on previous work by:
 and the rest of the Arduino community
 
 https://arduino.cc
+
+## Current version
+
+**number:** v0.0.1
+**codename:** ananas
