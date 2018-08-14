@@ -1,0 +1,68 @@
+#######################################
+# Syntax Coloring Map For EduLib
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+Led	KEYWORD1
+Button	KEYWORD1
+Potentiometer	KEYWORD1
+Thermistor	KEYWORD1
+LightSensor	KEYWORD1
+MosFet	KEYWORD1
+Relay	KEYWORD1
+ServoMotor	KEYWORD1
+AnalogInput	KEYWORD1
+AnalogInput2	KEYWORD1
+DigitalInput	KEYWORD1
+Output	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+state	KEYWORD2
+write	KEYWORD2
+read	KEYWORD2
+on	KEYWORD2
+off	KEYWORD2
+blink	KEYWORD2
+readCelsius	KEYWORD2
+readFahrenheit	KEYWORD2
+readSwitch	KEYWORD2
+pressed	KEYWORD2
+held	KEYWORD2
+released	KEYWORD2
+brightness	KEYWORD2
+fade	KEYWORD2
+readX	KEYWORD2
+readY	KEYWORD2
+readXAxisRate	KEYWORD2
+readYAxisRate	KEYWORD2
+calibrate	KEYWORD2
+readStep	KEYWORD2
+inclination	KEYWORD2
+polarity	KEYWORD2
+increasing	KEYWORD2
+decreasing	KEYWORD2
+
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+D13	LITERAL1
+D12	LITERAL1
+D11	LITERAL1
+D10	LITERAL1
+D9	LITERAL1
+D8	LITERAL1
+D7	LITERAL1
+D6	LITERAL1
+D5	LITERAL1
+D4	LITERAL1
+D3	LITERAL1
+D2	LITERAL1
+D1	LITERAL1
+D0	LITERAL1
+
+ANALOG_MAX	LITERAL1
