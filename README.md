@@ -4,7 +4,11 @@
 
 Arduino library for short introduction workshops ran by Arduino Education. This library, based on the original one made for the TinkerKit, simplifies the use of sensors and actuators when connected to an Arduino board. The goal is to run simple 1 or 2h workshops where users will still get the opportunity to design meaningful interactions using discrete electronic components.
 
+## Licence
+
 This library is licensed under GPLv3.
+
+## Credits
 
 Library created by D. Cuartielles, Malmo, 2018
 
