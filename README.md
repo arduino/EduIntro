@@ -1,6 +1,6 @@
-#Education Introduction Library - a.k.a. EduIntro
+# Education Introduction Library - a.k.a. EduIntro
 
-##Library for the Arduino Education Introduction Workshop
+## Library for the Arduino Education Introduction Workshop
 
 Arduino library for short introduction workshops ran by Arduino Education. This library, based on the original one made for the TinkerKit, simplifies the use of sensors and actuators when connected to an Arduino board. The goal is to run simple 1 or 2h workshops where users will still get the opportunity to design meaningful interactions using discrete electronic components.
 
@@ -19,3 +19,9 @@ Based on previous work by:
 and the rest of the Arduino community
 
 https://arduino.cc
+
+## Current version
+
+**number:** v0.0.2
+
+**codename:** ananas

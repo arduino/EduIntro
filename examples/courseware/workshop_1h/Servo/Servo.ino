@@ -13,7 +13,7 @@
 
 Button button(D7);	// creating the object 'button' on pin D7
 
-Servo servo(D10);		// creating the object 'servo' on pin D10
+ServoMotor servo(D10);		// creating the object 'servo' on pin D10
 
 
 void setup() {
