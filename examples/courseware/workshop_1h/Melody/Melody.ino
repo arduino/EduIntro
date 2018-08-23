@@ -1,7 +1,8 @@
 /*
   Melody
+
   Plays a song stored in a string, repeatedly. You should connect
-  a speaker to pin D9
+  a speaker to pin D10
 
   created in Aug 2018 by D. Cuartielles
 
@@ -22,7 +23,7 @@ int melody[] = { NOTE_C4, 4,
                  NOTE_B3, 4,
                  NOTE_C4, 4 };
 
-Piezo piezo(D9);	// creating the object 'piezo' on pin D9
+Piezo piezo(D10);	// creating the object 'piezo' on pin D10
 
 void setup() {
 //nothing here

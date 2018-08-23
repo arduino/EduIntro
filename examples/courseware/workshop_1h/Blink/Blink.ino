@@ -1,4 +1,6 @@
 /*
+  Blink
+
   based on Blink, Arduino's "Hello World!"
   Turns on an LED on for one second, then off for one second, repeatedly.
 

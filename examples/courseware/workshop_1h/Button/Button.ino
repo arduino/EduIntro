@@ -1,12 +1,14 @@
 /*
- Changes the behavior between on and off an LED when pressing a Button.
+  Button
 
- This example code is in the public domain.
+  Changes the behavior between on and off an LED when pressing a Button.
 
- created in Aug 2018 by D. Cuartielles
- based on work by F. Vanzati (2011) and M. Loglio (2013)
+  This example code is in the public domain.
 
- based on  http://www.arduino.cc/en/Tutorial/Button
+  created in Aug 2018 by D. Cuartielles
+  based on work by F. Vanzati (2011) and M. Loglio (2013)
+
+  based on  http://www.arduino.cc/en/Tutorial/Button
  */
 
 // include the EduIntro library

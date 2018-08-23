@@ -1,8 +1,8 @@
 /*
-  Melody
+  MelodyButton
 
-  Plays a song stored in a string, repeatedly. You should connect
-  a speaker to pin D10
+  Plays a song stored in a string, when pressing a button. You should connect
+  a speaker to pin D10 and a button to pin D7
 
   created in Aug 2018 by D. Cuartielles
 
@@ -23,6 +23,8 @@ int melody[] = { NOTE_C4, 4,
                  NOTE_B3, 4,
                  NOTE_C4, 4 };
 
+Button button(D7);	// creating the object 'button' on pin D7
+
 Piezo piezo(D10);	// creating the object 'piezo' on pin D10
 
 void setup() {
@@ -31,6 +33,8 @@ void setup() {
 
 void loop()
 {
-  piezo.play(melody); // play the song
-  delay(1000);        // wait for a second
+  // if the button was just pressed, play melody
+  if (button.pressed()) {
+    piezo.play(melody); // play the song
+  }
 }
