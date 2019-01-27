@@ -182,11 +182,11 @@ public:
     float readFahrenheit();
 
 protected:
-    const static float ADCres = 1023.0;
-    const static int Beta = 3950;			// Beta parameter
-    const static float Kelvin = 273.15;	// 0°C = 273.15 K
-    const static int Rb = 10000;			// 10 kOhm
-    const static float Ginf = 120.6685;	// Ginf = 1/Rinf
+    constexpr static float ADCres = 1023.0;
+    constexpr static int Beta = 3950;			// Beta parameter
+    constexpr static float Kelvin = 273.15;	// 0°C = 273.15 K
+    constexpr static int Rb = 10000;			// 10 kOhm
+    constexpr static float Ginf = 120.6685;	// Ginf = 1/Rinf
     // Rinf = R0*e^(-Beta/T0) = 4700*e^(-3950/298.15)
 };
 
@@ -241,7 +241,7 @@ class ServoMotor : public Servo
 {
 	public:
 		ServoMotor(uint8_t _pin);
-    write(uint8_t _value);
+    int write(uint8_t _value);
   protected:
     Servo _servo;
 };

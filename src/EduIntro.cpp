@@ -378,7 +378,7 @@ ServoMotor::ServoMotor(uint8_t _pin)
   _servo.attach(_pin);
 }
 
-ServoMotor::write(uint8_t _value)
+int ServoMotor::write(uint8_t _value)
 {
   _servo.write(_value);
 }
