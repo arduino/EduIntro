@@ -34,6 +34,6 @@ https://arduino.cc
 
 ## Current version
 
-**number:** v0.0.4
+**number:** v0.0.5
 
 **codename:** ananas
