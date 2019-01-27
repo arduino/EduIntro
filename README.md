@@ -18,6 +18,8 @@ This library is licensed under GPLv3.
 
 Library created by D. Cuartielles, Malmo, 2018
 
+MKR compatibility by A. Sabas, Malmo, 2019
+
 Based on previous work by:
 - D. Mellis, Milano, 2006
 - T. Igoe, New York, 2008 - 2010
