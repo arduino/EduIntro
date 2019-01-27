@@ -4,6 +4,10 @@
 
 Arduino library for short introduction workshops ran by Arduino Education. This library, based on the original one made for the TinkerKit, simplifies the use of sensors and actuators when connected to an Arduino board. The goal is to run simple 1 or 2h workshops where users will still get the opportunity to design meaningful interactions using discrete electronic components.
 
+## From version 0.0.5 - Added support for Arduino MKR boards
+
+20190126 - Sabas came all the way from Mexico to Malmo and made a fresh pull request. Now the library works with MKR boards!
+
 ## From version 0.0.4 - Added Cardboard Keyboard Workshop material
 
 See possible results of this workshop at:
