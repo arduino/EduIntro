@@ -142,6 +142,74 @@ class Button: public DigitalInput
 		void update();
 };
 
+/*      PIR      */
+
+class PIR: public DigitalInput
+{
+	public:
+    PIR(uint8_t _pin);
+    PIR(uint8_t _pin, uint8_t _mode);
+		boolean hadActivity();   // was it active since last reset?
+    boolean resetActivity(); // reset activity variable
+    boolean readSwitch();
+    boolean activated();
+		boolean active();
+		boolean deactivated();
+
+	protected:
+		boolean _toggleState, _oldState;
+		boolean _pressedState, _releasedState;
+		boolean _heldState, _activityState;
+        int _heldTime;
+        int _millisMark;
+        int _mode;
+
+		void update();
+};
+
+/*      DHT11      */
+
+class DHT11 : public DigitalInput
+{
+public:
+    //DHT11(uint8_t _pin): humidity(-1), temperatureC(-1), pin(_pin);
+    DHT11(uint8_t _pin);
+    // An enumeration modeling the read status of the sensor.
+    enum ReadStatus {
+        OK,
+        ERROR_CHECKSUM,
+        ERROR_TIMEOUT,
+      };
+    ReadStatus update();  // read the data and return status
+    inline int readCelsius() const {
+        return this->temperatureC;
+      }
+    inline float readFahrenheit() const {
+        return this->temperatureF;
+      }
+    inline int readHumidity() const {
+        return this->humidity;
+      }
+
+private:
+    int pin;
+    int humidity;
+    int temperatureC;
+    float temperatureF;
+    enum {
+      MAX_PIN_CHANGE_ITERATIONS = 10000, // timeout variable
+    };
+    inline ReadStatus waitForPinChange(const int oldValue,
+                                       unsigned  maxIterations =
+                                              MAX_PIN_CHANGE_ITERATIONS) const {
+        while ((--maxIterations > 0) && (digitalRead(this->pin) == oldValue)) {
+            // Just keep looping...
+        }
+
+        return (maxIterations > 0) ? OK : ERROR_TIMEOUT;
+      }
+};
+
 /*
  -----------------------------------------------------------------------------
                                 Analog Inputs
@@ -190,6 +258,18 @@ protected:
     // Rinf = R0*e^(-Beta/T0) = 4700*e^(-3950/298.15)
 };
 
+class LM35 : public AnalogInput
+{
+public:
+    LM35(uint8_t _pin);
+    float readCelsius();
+    float readFahrenheit();
+
+protected:
+    constexpr static float ADCres = 1023.0;
+    constexpr static float Acc = 0.01;			// Accuracy mV/C
+};
+
 /*
  -----------------------------------------------------------------------------
                                     Outputs
@@ -235,7 +315,7 @@ class Relay : public Output
 		Relay(uint8_t _pin);
 };
 
-/*      Relay       */
+/*      Servo       */
 
 class ServoMotor : public Servo
 {
