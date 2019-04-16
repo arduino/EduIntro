@@ -319,11 +319,12 @@ class Relay : public Output
 
 class ServoMotor : public Servo
 {
-	public:
-		ServoMotor(uint8_t _pin);
+  public:
+    ServoMotor(uint8_t _pin);
     int write(uint8_t _value);
-  protected:
-    Servo _servo;
+  private:
+    int pin;
+    boolean _attached;
 };
 
 #endif

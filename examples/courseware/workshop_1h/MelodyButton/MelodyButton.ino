@@ -1,7 +1,7 @@
 /*
   MelodyButton
 
-  Plays a song stored in a string, when pressing a button. You should connect
+  Plays a song stored in an array, when pressing a button. You should connect
   a speaker to pin D10 and a button to pin D7
 
   created in Aug 2018 by D. Cuartielles

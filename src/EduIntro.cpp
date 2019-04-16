@@ -218,6 +218,7 @@ Output::Output(uint8_t _pin)
 
 boolean Output::isPWM()
 {
+  //XXX this is just for the UNO board, needs fix
   if (pin == D11 || pin == D10 || pin == D9 || pin == D6 || pin == D5 || pin == D3)
     return true;
   return false;
@@ -277,11 +278,11 @@ void Output::blink(int del1, int del2)
 */
 Button::Button(uint8_t _pin) : DigitalInput(_pin, INPUT_PULLUP)
 {
-	_toggleState = HIGH;
+	_toggleState = false;
 	_oldState = HIGH;
-	_pressedState = HIGH;
-	_releasedState = HIGH;
-	_heldState = HIGH;
+	_pressedState = false;
+	_releasedState = false;
+	_heldState = false;
   _heldTime = 500;
 }
 
@@ -326,7 +327,7 @@ boolean Button::pressed()
 
 	if(_pressedState == true)
 	{
-        _millisMark = millis();
+    _millisMark = millis();
 		_pressedState = false;
 		return true;
 	}
@@ -660,13 +661,18 @@ Relay::Relay(uint8_t _pin) : Output(_pin) {}
 
 ServoMotor::ServoMotor(uint8_t _pin)
 {
-  Servo _servo;
-  _servo.attach(_pin);
+  Servo();
+  pin = _pin;
+  _attached = false;
 }
 
 int ServoMotor::write(uint8_t _value)
 {
-  _servo.write(_value);
+  if (!_attached) {
+    attach(pin);
+    _attached = true;
+    }
+  Servo::write(_value);
 }
 
 /* Piezo */

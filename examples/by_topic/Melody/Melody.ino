@@ -1,7 +1,7 @@
 /*
   Melody
 
-  Plays a song stored in a string, repeatedly. You should connect
+  Plays a song stored in an array, repeatedly. You should connect
   a speaker to pin D10
 
   created in Aug 2018 by D. Cuartielles
