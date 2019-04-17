@@ -4,6 +4,10 @@
 
 Arduino library for short introduction workshops ran by Arduino Education. This library, based on the original one made for the TinkerKit, simplifies the use of sensors and actuators when connected to an Arduino board. The goal is to run simple 1 or 2h workshops where users will still get the opportunity to design meaningful interactions using discrete electronic components.
 
+## From version 0.0.7 - Fix Bugs Release
+
+20190417 - General bug fixing: servo library not-two-servos fixed, added new two-melodies example, fixed the button-pressed-by-default bug. Thanks to D. Spikol for bug catching and S. Mistry for reminding me that C++ inheritance is not always doing the things you expect.
+
 ## From version 0.0.6 - Extra sensor: DHT11
 
 20190209 - For a course at Aalborg University, CPH, we added the humidity and temperature sensor DHT11, the LM35 temperature sensor, a PIR sensor, and a couple more examples to the courseware.
