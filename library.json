@@ -2,7 +2,7 @@
 "name": "EduIntro",
 "frameworks": "Arduino",
 "keywords": "Introduction, Education, Workshop",
-"description": "Library for the Arduino Education Introduction Workshop series, includes examples for a broad range of sensors, courseware, and more.",
+"description": "Library for the Arduino Education Introduction Workshop series, includes examples for a broad range of sensors, courseware, and more. Optimized for collaboration.",
 "url": "https://github.com/arduino/EduIntro",
 "downloadUrl": "https://github.com/arduino/EduIntro/releases",
 "authors":

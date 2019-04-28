@@ -48,7 +48,7 @@ and the rest of the Arduino community
 
 https://arduino.cc
 
-## Current version
+## Current stable version
 
 **number:** v0.0.7
 
