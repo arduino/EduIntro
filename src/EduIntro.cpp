@@ -30,5 +30,9 @@
      Relay
      ServoMotor
      Piezo
-
+-----------------------------------------------------------------------------
+                                Classes: Board Specific
+-----------------------------------------------------------------------------
+     Arduino uno wifi Rev2 accelerometer       
+     Arduino uno wifi Rev2 WIFININA       
 */

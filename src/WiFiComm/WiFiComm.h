@@ -4,6 +4,7 @@
 #ifndef WiFiComm_h
 #define WiFiComm_h
 
+#if defined(ARDUINO_ARCH_MEGAAVR)
 #include <SPI.h>
 #include <WiFiNINA.h>
 #include "WiFiServer.h"
@@ -22,8 +23,14 @@ class WiFiComm
 		void init(int led, const char *ssid, const char *pass);
 		
 		int getStatus();	
+
+        String getSSID();
+
+        IPAddress getIP();
 				
 		WiFiClient getClient();		
 };
+
+#endif
 
 #endif

@@ -1,4 +1,7 @@
 #include <Arduino.h>
+
+#if defined(ARDUINO_ARCH_MEGAAVR)
+
 #include <Arduino_LSM6DS3.h>
 
 #ifndef Motion_h
@@ -8,8 +11,10 @@ class Motion
 {
   public:
       Motion();
-      void begin();
-      void read();
+      int begin();
+      int read();
+      int readAcceleration();
+      int readGyroscope();
       float acc_x;
       float acc_y;
       float acc_z;
@@ -17,4 +22,6 @@ class Motion
       float gyro_y;
       float gyro_z;
 };
+#endif
+
 #endif

@@ -16,7 +16,7 @@
   Adapted to EduIntro by C. Rodriguez, and D. Cuartielles (2019)
 
   Created by Tom Igoe (2012)
- */
+*/
 
 #include <EduIntro.h>
 
@@ -29,14 +29,13 @@ int keyIndex = 0;       // your network key Index number (needed only for WEP)
 WiFiComm MyWiFi;
 int led = LED_BUILTIN;
 int status = WL_IDLE_STATUS;
-// WiFiServer server(80);
-int temp = 0;
+boolean firstTime = true;
 
 void setup() {
   // initialize serial and wait for port to open:
   Serial.begin(9600);
   while (!Serial) {};
-  
+
   MyWiFi.init(led, ssid, pass);
 
   // you're connected now, so print out the status
@@ -55,21 +54,17 @@ void loop() {
       // a device has connected to the AP
       Serial.println("Device connected to AP");
     } else {
-      // a device has disconnected from the AP, and we are back in listening mode
-      Serial.println("Device disconnected from AP");
+      if (!firstTime) {
+        // a device has disconnected from the AP, and we are back in listening mode
+        Serial.println("Device disconnected from AP");
+      }
     }
   }
-  if (temp < 5) {
-    Serial.print("\t Hej!!");
-  }
-  
+
   WiFiClient client = MyWiFi.getClient();   // listen for incoming clients
-  if (temp < 5) {
-    Serial.println("\t client!!");
-    temp++;
-  }
-  
+
   if (client) {                             // if you get a client,
+    firstTime = false;
     Serial.println("new client");           // print a message out the serial port
     String currentLine = "";                // make a String to hold incoming data from the client
     while (client.connected()) {            // loop while the client's connected
@@ -117,7 +112,7 @@ void loop() {
     client.stop();
     Serial.println("client disconnected");
   }
-  
+
 }
 
 

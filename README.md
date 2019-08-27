@@ -4,6 +4,10 @@
 
 Arduino library for short introduction workshops ran by Arduino Education. This library, based on the original one made for the TinkerKit, simplifies the use of sensors and actuators when connected to an Arduino board. The goal is to run simple 1 or 2h workshops where users will still get the opportunity to design meaningful interactions using discrete electronic components.
 
+## From version 0.0.10 - Fix Bugs Release
+
+20190827 - the previous release included a non-functional WiFiComm file. It has been revised + some beautification of some of the code. Also made sure the Classic boards work again (got broken in the previous release)
+
 ## From version 0.0.9 - Added WiFi REV2
 
 20190827 - added support for the WiFi REV2 board, plus fixed incompatibilities with servo + piezo at once. 

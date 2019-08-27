@@ -1,6 +1,7 @@
 
 #include "WiFiComm.h"
 
+#if defined(ARDUINO_ARCH_MEGAAVR)
 
 WiFiComm::WiFiComm () {
 	server = WiFiServer(80);
@@ -51,6 +52,13 @@ void WiFiComm::init(int led, const char *ssid, const char *pass){
 	
 }
 
+String WiFiComm::getSSID() {
+    return WiFi.SSID();
+}
+
+IPAddress WiFiComm::getIP() {
+    return WiFi.localIP();
+}
 
 int WiFiComm::getStatus(){
 	return WiFi.status();
@@ -59,3 +67,5 @@ int WiFiComm::getStatus(){
 WiFiClient WiFiComm::getClient() {
 	return server.available();
 }
+
+#endif

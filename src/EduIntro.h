@@ -103,10 +103,11 @@
 
 /*      Arduino uno wifi Rev2 accelerometer       */
 
-#ifdef ARDUINO_ARCH_MEGAAVR
-    #include "IMU/Motion.h"
-    #include "WiFiComm/WiFiComm.h"
-#endif
+#include "IMU/Motion.h"
+
+/*      Arduino uno wifi Rev2 WIFININA       */
+
+#include "WiFiComm/WiFiComm.h"
 
 /*
  -----------------------------------------------------------------------------

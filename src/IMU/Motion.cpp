@@ -1,19 +1,34 @@
 #include "Motion.h"
 
+#if defined(ARDUINO_ARCH_MEGAAVR)
+
 Motion::Motion(){
 }
-void Motion::begin(){
-  if (!IMU.begin()) {
-    Serial.println("Failed to initialize IMU!");
-    while (1);
-  }
+
+int Motion::begin(){
+    return IMU.begin();
 }
 
-void Motion::read(){
+int Motion::readAcceleration() {
   if (IMU.accelerationAvailable()) {
     IMU.readAcceleration(Motion::acc_x,Motion::acc_y,Motion::acc_z);
+    return 1;
   }
+  return 0;
+}
+
+int Motion::readGyroscope() {
   if (IMU.gyroscopeAvailable()) {
     IMU.readGyroscope(Motion::gyro_x,Motion::gyro_y,Motion::gyro_z);
-  }
+    return 1;
+  } 
+  return 0;
 }
+
+int Motion::read() {
+  if(Motion::readAcceleration() && Motion::readGyroscope())
+    return 1;
+  return 0;
+}
+
+#endif

@@ -7,7 +7,7 @@
 
   This example uses the embeded IMU unit in the Arduino UNO Wifi Rev2.
 
-  The IMU captures values from the accelerometer and the gyroscope. 
+  The IMU captures values from the accelerometer and the gyroscope.
   These values can be accesable with:
 
   acc_x: Returns the X value of the accelerometer.
@@ -26,27 +26,31 @@
 // include the EduIntro library
 #include <EduIntro.h>
 
-Motion imu; //Create the object to access the IMU unit 
+Motion imu; //Create the object to access the IMU unit
 
 void setup()
 {
   // initialize serial communications at 9600 bps
   Serial.begin(9600);
 
-  // initialize the IMU
-  imu.begin();
+  // initialize the IMU, if failed, stay here
+  if (!imu.begin()) {
+    Serial.println("Failed to initialize IMU!");
+    while (1);
+  }
 }
 
 void loop()
 {
   // read all data from the IMU and store it in local variables
-  imu.read(); 
+  if (imu.read()) {
 
-  // print the collected data in a row on the Serial Monitor
-  // or use the Serial Plotter to better understand the values
-  Serial.print(acc_x);
-  Serial.print('\t');
-  Serial.print(acc_y);
-  Serial.print('\t');
-  Serial.println(acc_z);
+    // print the collected data in a row on the Serial Monitor
+    // or use the Serial Plotter to better understand the values
+    Serial.print(imu.acc_x);
+    Serial.print('\t');
+    Serial.print(imu.acc_y);
+    Serial.print('\t');
+    Serial.println(imu.acc_z);
+  }
 }
