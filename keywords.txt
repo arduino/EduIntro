@@ -4,23 +4,25 @@
 # Datatypes (KEYWORD1)
 #######################################
 
-EduIntro KEYWORD1
-Led	KEYWORD1
-Button	KEYWORD1
-Potentiometer	KEYWORD1
-Piezo	KEYWORD1
-PIR KEYWORD1
-DHT11 KEYWORD1
-LM35 KEYWORD1
-Thermistor	KEYWORD1
-LightSensor	KEYWORD1
-MosFet	KEYWORD1
-Relay	KEYWORD1
-ServoMotor	KEYWORD1
-AnalogInput	KEYWORD1
-AnalogInput2	KEYWORD1
-DigitalInput	KEYWORD1
-Output	KEYWORD1
+EduIntro 	KEYWORD1	EduIntro
+Led		KEYWORD1	Led
+Button		KEYWORD1	Button
+Potentiometer	KEYWORD1	Potentiometer
+Piezo		KEYWORD1	Piezo
+PIR 		KEYWORD1	PIR
+DHT11 		KEYWORD1	DHT11
+LM35 		KEYWORD1	LM35
+Thermistor	KEYWORD1	Thermistor
+LightSensor	KEYWORD1	LightSensor
+MosFet		KEYWORD1	MosFet
+Relay		KEYWORD1	Relay
+ServoMotor	KEYWORD1	ServoMotor
+AnalogInput	KEYWORD1	AnalogInput
+AnalogInput2	KEYWORD1	AnalogInput2
+DigitalInput	KEYWORD1	DigitalInput
+Output		KEYWORD1	Output
+Motion		KEYWORD1	Motion
+WiFiComm 	KEYWORD1	WiFiComm
 
 #######################################
 # Methods and Functions (KEYWORD2)
@@ -50,7 +52,20 @@ inclination	KEYWORD2
 polarity	KEYWORD2
 increasing	KEYWORD2
 decreasing	KEYWORD2
+getStatus	KEYWORD2
+getSSID	KEYWORD2
+getIP	KEYWORD2
+getClient	KEYWORD2
 
+#######################################
+# System Variables (KEYWORD2)
+#######################################
+acc_x   KEYWORD2
+acc_y   KEYWORD2
+acc_z   KEYWORD2
+gyro_x  KEYWORD2
+gyro_y  KEYWORD2
+gyro_z  KEYWORD2
 
 #######################################
 # Constants (LITERAL1)

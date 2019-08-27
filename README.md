@@ -4,6 +4,14 @@
 
 Arduino library for short introduction workshops ran by Arduino Education. This library, based on the original one made for the TinkerKit, simplifies the use of sensors and actuators when connected to an Arduino board. The goal is to run simple 1 or 2h workshops where users will still get the opportunity to design meaningful interactions using discrete electronic components.
 
+## From version 0.0.9 - Added WiFi REV2
+
+20190827 - added support for the WiFi REV2 board, plus fixed incompatibilities with servo + piezo at once. 
+
+## From version 0.0.8 (never released) - The BIG Cut
+
+20190501 - all classes were separated to allow adding new classes by simply copy-pasting and modifying template examples.
+
 ## From version 0.0.7 - Fix Bugs Release
 
 20190417 - General bug fixing: servo library not-two-servos fixed, added new two-melodies example, fixed the button-pressed-by-default bug. Thanks to D. Spikol for bug catching and S. Mistry for reminding me that C++ inheritance is not always doing the things you expect.
@@ -30,6 +38,8 @@ This library is licensed under GPLv3.
 
 Library created and maintained by D. Cuartielles, Malmo, 2018 - 2019
 
+WiFi REV2 compatibility by C. Rodriguez (IMU + WiFi), and D. Cuartielles (servo), Malmo, 2019
+
 MKR compatibility by A. Sabas, Malmo, 2019
 
 Based on previous work by:
@@ -50,6 +60,6 @@ https://arduino.cc
 
 ## Current stable version
 
-**number:** v0.0.7
+**number:** v0.0.9
 
 **codename:** ananas
