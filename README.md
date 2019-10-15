@@ -1,52 +1,250 @@
 # Education Introduction Library - a.k.a. EduIntro
 
-## Library for the Arduino Education Introduction Workshop
+## Description
 
-Arduino library for short introduction workshops ran by Arduino Education. This library, based on the original one made for the TinkerKit, simplifies the use of sensors and actuators when connected to an Arduino board. The goal is to run simple 1 or 2h workshops where users will still get the opportunity to design meaningful interactions using discrete electronic components.
+Arduino library for short introduction training workshops run by Arduino Education. This library is originally made for TinkerKit. It simplifies the use of sensors and actuators when connected to an Arduino board. The goal is to plan and conduct a simple one or two hours of training workshop where users will still have the opportunity to model meaningful interactions using discrete electronic components. It consists of already implemented basic functions for electronic components. In order to use its functions, it only requires to import this library and then call its functions.
 
-## From version 0.0.10 - Fix Bugs Release
+## Installation
 
-20190827 - the previous release included a non-functional WiFiComm file. It has been revised + some beautification of some of the code. Also made sure the Classic boards work again (got broken in the previous release)
+### First Method
 
-## From version 0.0.9 - Added WiFi REV2
+1. Navigate to the Releases page.
+1. Download the latest release.
+1. Extract the zip file
+1. In the Arduino IDE, navigate to Sketch > Include Library > Add .ZIP Library
 
-20190827 - added support for the WiFi REV2 board, plus fixed incompatibilities with servo + piezo at once. 
+### Second Method
 
-## From version 0.0.8 (never released) - The BIG Cut
+1. In the Arduino IDE, navigate to Sketch > Include Library > Manage Libraries
+1. Then the Library Manager will open and you will find a list of libraries that are already installed or ready for installation.
+1. Then search for EduIntro using the search bar.
+1. Click on the text area and then select the specific version and install it.
 
-20190501 - all classes were separated to allow adding new classes by simply copy-pasting and modifying template examples.
+## Features
 
-## From version 0.0.7 - Fix Bugs Release
+- ### Self contained
 
-20190417 - General bug fixing: servo library not-two-servos fixed, added new two-melodies example, fixed the button-pressed-by-default bug. Thanks to D. Spikol for bug catching and S. Mistry for reminding me that C++ inheritance is not always doing the things you expect.
+    EduIntro doesn’t depend on any library.
 
-## From version 0.0.6 - Extra sensor: DHT11
+- ### Easy to use
 
-20190209 - For a course at Aalborg University, CPH, we added the humidity and temperature sensor DHT11, the LM35 temperature sensor, a PIR sensor, and a couple more examples to the courseware.
+    It is simple, basic and very easy to understand. The user only needs to import the library in his code and start using its functions.
 
-## From version 0.0.5 - Added support for Arduino MKR boards
+- ### Complete package for small workshops
 
-20190126 - Sabas came all the way from Mexico to Malmo and made a fresh pull request. Now the library works with MKR boards!
+    Basic functions of discrete electronic components have already been implemented in this library. For a small one or two hours workshop, the user does not have to implement all the basic functions for the electronic component from scratch.
 
-## From version 0.0.4 - Added Cardboard Keyboard Workshop material
+- ### Function calls
 
-See possible results of this workshop at:
+    Basic functions of the electronic components have been implemented in this library. There's no need to re-implement these basic functions from scratch. The user simply has to import the library in the project and can use any of its functions by just calling it.
 
-https://photos.app.goo.gl/G9B4KmBHX7FQGdYNA
+- ### Intuitive syntax
 
-## Licence
+    EduIntro has a simple and intuitive syntax to handle variables and functions.
 
-This library is licensed under GPLv3.
+- ### Give back
+
+    EduIntro is free for everyone. Everyone can download and use it in their projects, assignments or anywhere for free.
+
+## Components and functions
+
+- ### Button
+
+  - update()
+  - readSwitch()
+  - pressed()
+  - held()
+
+- ### DHT11
+
+  - update()
+  - readCelsius()
+  - readFahrenheit()
+  - readHumidity()
+
+- ### Generic
+
+  - ### For analog inputs
+
+    - readX()
+    - readY()
+    - readZ()
+    - read()
+    - increasing()
+    - decreasing()
+
+  - ### For digital inputs
+
+    - read()
+
+  - ### For outputs
+
+    - isPWM()
+    - write()
+    - on()
+    - off()
+    - blink()
+    - state()
+
+- ### IMU
+
+  - begin()
+  - readAcceleration()
+  - readGyroscope()
+  - read()
+
+- ### LED
+
+  - brightness()
+
+- ### LM35
+
+  - readCelsius()
+  - readFahrenheit()
+
+- ### PIR
+
+  - update()
+  - hadActivity()
+  - resetActivity()
+  - readSwitch()
+  - activated()
+  - deactivated()
+  - active()
+
+- ### Piezo
+
+  - beep()
+  - play()
+  - getMelodySize()
+
+- ### Potentiometer
+
+  - read()
+  - readStep()
+
+- ### ServeoMotor
+
+  - write()
+
+- ### Thermistor
+
+  - readCelsius()
+  - readFahrenheit()
+
+- ### WiFiComm
+
+  - init()
+  - getSSID()
+  - getIP()
+  - getStatus()
+  - getClient()
+
+## Examples
+
+There are many examples implemented in this library. Below are shown some of the examples.
+
+  - ### Blink
+    Turns on an LED on for one second, then off for one second, repeatedly
+
+``` C++
+#include <EduIntro.h>
+
+Led led(D10);
+
+void loop()
+{
+  led.on();
+  delay(1000);
+  led.off();
+  delay(1000);
+}
+```
+
+  - ### Button
+    Changes the behavior between on and off an LED when pressing a button.
+
+``` C++
+#include <EduIntro.h>
+
+Button button(D7);
+Led led(D10);
+
+void loop()
+{
+  if (button.readSwitch() == LOW) {
+    led.on();
+  }
+  else {
+    led.off();
+  }
+}
+```
+
+## Versions
+
+### v0.0.10 (Current Stable version)
+
+#### August 28, 2019
+
+The previous release included a non-functional WiFiComm file. It has been revised and made beautification in some of the code. It has been made sure that the Classic boards work fine as it got broken in the previous release.
+
+### v0.0.9
+
+#### August 27, 2019
+
+Added support for the WiFi REV2 board and fixed the incompatibilities with servo and piezo.
+
+### v0.0.8
+
+#### May 01, 2019
+
+All classes were separated to allow adding new classes by simply copy-pasting and modifying template examples.
+
+### v0.0.7
+
+#### April 17, 2019
+
+General bug fixing: servo library not-two-servos fixed, added a new two-melodies example, fixed the button-pressed-by-default bug. Thanks to D. Spikol for bug catching and S. Mistry for reminding me that C++ inheritance is not always doing the things you expect.
+
+### v0.0.6
+
+#### February 10, 2019
+
+For a course at Aalborg University, CPH, we added the humidity and temperature sensor DHT11, the LM35 temperature sensor, a PIR sensor, and a couple more examples to the courseware.
+
+### v0.0.5
+
+#### January 27, 2019
+
+Sabas came all the way from Mexico to Malmo and made a fresh pull request. Now the library works with MKR boards!
+
+### v0.0.4
+
+#### January 25, 2019
+
+See possible results of the workshop [here](https://photos.app.goo.gl/G9B4KmBHX7FQGdYNA)
+
+## Contributing
+
+If you want to contribute to this project:
+
+- Report bugs and errors
+- Ask for enhancements
+- Create issues and pull requests
+- Tell others about this library
+- Contribute new protocols
+
+Please read [CONTRIBUTING.md](https://github.com/AghaSaad04/EduIntro/blob/master/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Credits
 
-Library created and maintained by D. Cuartielles, Malmo, 2018 - 2019
-
+The Library created and maintained by D. Cuartielles, Malmo, 2018 - 2019
 WiFi REV2 compatibility by C. Rodriguez (IMU + WiFi), and D. Cuartielles (servo), Malmo, 2019
-
 MKR compatibility by A. Sabas, Malmo, 2019
 
 Based on previous work by:
+
 - D. Mellis, Milano, 2006
 - T. Igoe, New York, 2008 - 2010
 - S. Fitzgerald, New York, 2010
@@ -55,15 +253,16 @@ Based on previous work by:
 - M. Loglio, London, 2013
 - G. Hadjikyriacou (DHT11 lib originator), ??
 - SimKard (DHT11), 2010
-- Rob Tillaart (DHT11), 2011 - 2013
-- Andy Dalton (DHT11), 2013
-
-and the rest of the Arduino community
-
-https://arduino.cc
+- R. Tillaart (DHT11), 2011 - 2013
+- A. Dalton (DHT11), 2013
+- [Arduino community](https://arduino.cc)
 
 ## Current stable version
 
 **number:** v0.0.10
 
 **codename:** ananas
+
+## License
+
+This library is licensed under [GPLv3](https://www.gnu.org/licenses/quick-guide-gplv3.html).
