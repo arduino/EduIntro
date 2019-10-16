@@ -8,17 +8,17 @@ Arduino library for short introduction training workshops run by Arduino Educati
 
 ### First Method
 
-1. Navigate to the Releases page.
-1. Download the latest release.
-1. Extract the zip file
-1. In the Arduino IDE, navigate to Sketch > Include Library > Add .ZIP Library
-
-### Second Method
-
 1. In the Arduino IDE, navigate to Sketch > Include Library > Manage Libraries
 1. Then the Library Manager will open and you will find a list of libraries that are already installed or ready for installation.
 1. Then search for EduIntro using the search bar.
 1. Click on the text area and then select the specific version and install it.
+
+### Second Method
+
+1. Navigate to the Releases page.
+1. Download the latest release.
+1. Extract the zip file
+1. In the Arduino IDE, navigate to Sketch > Include Library > Add .ZIP Library
 
 ## Features
 
