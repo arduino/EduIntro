@@ -115,6 +115,7 @@ Arduino library for short introduction training workshops run by Arduino Educati
 - ### Piezo
 
   - beep()
+  - noBeep()
   - play()
   - getMelodySize()
 
