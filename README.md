@@ -184,7 +184,15 @@ void loop()
 
 ## Versions
 
-### v0.0.10 (Current Stable version)
+### v0.0.11 (Current Stable version)
+
+#### December 9, 2019
+
+* Added Nano Every by separating the two possible MEGAAVR boards (Nano Every + Uno WiFi rev2).
+* Included a noBeep() function
+* Added the new README with basic API description
+
+### v0.0.10
 
 #### August 28, 2019
 
@@ -260,7 +268,7 @@ Based on previous work by:
 
 ## Current stable version
 
-**number:** v0.0.10
+**number:** v0.0.11
 
 **codename:** ananas
 
