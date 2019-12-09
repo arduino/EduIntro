@@ -4,7 +4,8 @@
 #ifndef WiFiComm_h
 #define WiFiComm_h
 
-#if defined(ARDUINO_ARCH_MEGAAVR)
+//#if defined(ARDUINO_ARCH_MEGAAVR)
+#if defined(AVR_UNO_WIFI_REV2)
 #include <SPI.h>
 #include <WiFiNINA.h>
 #include "WiFiServer.h"

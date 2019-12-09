@@ -56,6 +56,9 @@ getStatus	KEYWORD2
 getSSID	KEYWORD2
 getIP	KEYWORD2
 getClient	KEYWORD2
+beep	KEYWORD2
+play	KEYWORD2
+noBeep	KEYWORD2
 
 #######################################
 # System Variables (KEYWORD2)

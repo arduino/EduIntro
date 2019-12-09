@@ -1,6 +1,7 @@
 #include <Arduino.h>
 
-#if defined(ARDUINO_ARCH_MEGAAVR)
+//#if defined(ARDUINO_ARCH_MEGAAVR)
+#if defined(AVR_UNO_WIFI_REV2)
 
 #include <Arduino_LSM6DS3.h>
 

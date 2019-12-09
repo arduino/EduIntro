@@ -3,16 +3,25 @@
 
 Piezo::Piezo(uint8_t _pin) : Output(_pin) {}
 
+void Piezo::noBeep()
+{
+  noTone(pin);
+}
+
 void Piezo::beep(int _tone)
 {
   if (_tone > SILENCE)
     tone(pin, _tone);
+  else
+    noTone(pin);
 }
 
 void Piezo::beep(int _tone, int _duration)
 {
   if (_tone > SILENCE)
     tone(pin, _tone, _duration);
+  else
+    noTone(pin);
 }
 
 void Piezo::play(int melody[])

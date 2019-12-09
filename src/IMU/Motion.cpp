@@ -1,6 +1,7 @@
 #include "Motion.h"
 
-#if defined(ARDUINO_ARCH_MEGAAVR)
+//#if defined(ARDUINO_ARCH_MEGAAVR)
+#if defined(AVR_UNO_WIFI_REV2)
 
 Motion::Motion(){
 }

@@ -1,7 +1,8 @@
 
 #include "WiFiComm.h"
 
-#if defined(ARDUINO_ARCH_MEGAAVR)
+//#if defined(ARDUINO_ARCH_MEGAAVR)
+#if defined(AVR_UNO_WIFI_REV2)
 
 WiFiComm::WiFiComm () {
 	server = WiFiServer(80);
