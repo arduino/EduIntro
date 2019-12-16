@@ -186,7 +186,7 @@ void loop()
 
 ### v0.0.12 (Current Stable version)
 
-#### Decembre 16, 2019
+#### December 16, 2019
 
 * Added library dependencies
 
