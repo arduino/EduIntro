@@ -270,7 +270,7 @@ Based on previous work by:
 - SimKard (DHT11), 2010
 - R. Tillaart (DHT11), 2011 - 2013
 - A. Dalton (DHT11), 2013
-- [Arduino community](https://arduino.cc)
+- [Arduino community](https://www.arduino.cc)
 
 ## Current stable version
 
