@@ -54,7 +54,7 @@ Arduino library for short introduction training workshops run by Arduino Educati
   - readSwitch()
   - pressed()
   - held()
-  - *Note: construct a button with Button <name>(<pin>) or Button <name>(<pin>,PULL_UP | PULL_DOWN), by default buttons are considered to use internal pull-ups* 
+  - *Note: construct a button with Button [name]([pin]) or Button [name]([pin],PULL_UP | PULL_DOWN), by default buttons are considered to use internal pull-ups* 
 
 - ### DHT11
 
