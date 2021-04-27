@@ -282,7 +282,7 @@ Based on previous work by:
 
 ## Current stable version
 
-**number:** v0.0.11
+**number:** v0.0.13
 
 **codename:** ananas
 
