@@ -258,7 +258,7 @@ If you want to contribute to this project:
 - Tell others about this library
 - Contribute new protocols
 
-Please read [CONTRIBUTING.md](https://github.com/AghaSaad04/EduIntro/blob/master/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [CONTRIBUTING.md](https://github.com/arduino/EduIntro/blob/master/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Credits
 
