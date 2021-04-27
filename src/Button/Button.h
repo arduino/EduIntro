@@ -4,10 +4,14 @@
 #ifndef Button_h
 #define Button_h
 
+#define PULL_DOWN 0
+#define PULL_UP 1
+
 class Button: public DigitalInput
 {
 	public:
 		Button(uint8_t _pin);
+		Button(uint8_t _pin, uint8_t pulltype);
 		boolean readSwitch();
 		boolean pressed();
 		boolean held();
@@ -19,6 +23,9 @@ class Button: public DigitalInput
 		boolean _heldState;
         int _heldTime;
         int _millisMark;
+				int _debounceTime;
+				int _millisDebounceMark;
+        int _pulltype;
 
 		void update();
 };

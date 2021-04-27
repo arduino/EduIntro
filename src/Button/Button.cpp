@@ -13,33 +13,70 @@ Button::Button(uint8_t _pin) : DigitalInput(_pin, INPUT_PULLUP)
 	_releasedState = false;
 	_heldState = false;
   _heldTime = 500;
+	_debounceTime = 50;
+	_pulltype = 1; // by default it is pullup
+	_millisDebounceMark = millis();
+}
+
+Button::Button(uint8_t _pin, uint8_t pulltype) : DigitalInput(_pin, INPUT)
+{
+	_toggleState = false;
+	_oldState = HIGH;
+	_pressedState = false;
+	_releasedState = false;
+	_heldState = false;
+  _heldTime = 500;
+	_debounceTime = 50;
+	_pulltype = pulltype; // by default it is pullup
+	_millisDebounceMark = millis();
 }
 
 void Button::update() {
   boolean newState = Button::read();
   if (newState != _oldState) {
+		int timeDebounceDiff = millis() - _millisDebounceMark;
+
     // pressed?
-    if (newState == LOW) {
-      _pressedState = true;
-    }
-    else {
-      _releasedState = true;
-     _toggleState = !_toggleState;
-    }
+		if (_pulltype == 1) {
+	    if (newState == LOW && timeDebounceDiff > _debounceTime) {
+	      _pressedState = true;
+	    }
+	    else {
+	      _releasedState = true;
+	     _toggleState = !_toggleState;
+	    }
+		} else {
+			if (newState == HIGH && timeDebounceDiff > _debounceTime) {
+				_pressedState = true;
+			}
+			else {
+				_releasedState = true;
+			 _toggleState = !_toggleState;
+			}
+		}
 
     _oldState = newState;
-    delay(50); // XXX debouncing FIXME to avoid delay
+		_millisDebounceMark = millis();
+    //delay(50); // XXX debouncing FIXME to avoid delay
   }
 
   else {
 
       int timeDiff = millis() - _millisMark;
 
-      if(newState == LOW && _oldState == LOW && timeDiff > _heldTime) {
-  		_heldState = true;
-  	} else {
-  		_heldState = false;
-  	}
+			if (_pulltype == 1) {
+		    if(newState == LOW && _oldState == LOW && timeDiff > _heldTime) {
+		  		_heldState = true;
+		  	} else {
+		  		_heldState = false;
+		  	}
+			} else {
+				if(newState == HIGH && _oldState == HIGH && timeDiff > _heldTime) {
+		  		_heldState = true;
+		  	} else {
+		  		_heldState = false;
+		  	}
+			}
   }
 }
 
