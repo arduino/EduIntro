@@ -50,9 +50,9 @@ Arduino library for short introduction training workshops run by Arduino Educati
 
 - ### Button
 
-  - update()
   - readSwitch()
   - pressed()
+  - released()
   - held()
   - *Note: construct a button with Button NAME(PIN) or Button NAME(PIN,PULL_UP | PULL_DOWN), by default buttons are considered to use internal pull-ups* 
 
