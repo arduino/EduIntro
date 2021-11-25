@@ -127,7 +127,7 @@ Arduino library for short introduction training workshops run by Arduino Educati
   - readRange()
   - readStep()
 
-- ### ServeoMotor
+- ### ServoMotor
 
   - write()
 
