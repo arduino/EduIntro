@@ -187,10 +187,11 @@ void loop()
 
 ## Versions
 
-### v0.0.14 (Current stable version)
+### v0.0.15 (Current stable version)
 
 #### November, 2021
 
+* Fixed library name to be **Arduino_EduIntro** to satisfy the Arduino Library Linter tool
 * Fixed an issue with the Potentiometer class in mbed (Nano 33 BLE Sense)
 * Added readRange() method for the Potentiometer
 * Added inverted logic for outputs and the constructor to have e.g. *Led led(PIN, NORMAL | INVERTED)* 
@@ -292,7 +293,7 @@ Based on previous work by:
 
 ## Current stable version
 
-**number:** v0.0.14
+**number:** v0.0.15
 
 **codename:** ananas
 
