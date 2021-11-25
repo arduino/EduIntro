@@ -123,6 +123,7 @@ Arduino library for short introduction training workshops run by Arduino Educati
 - ### Potentiometer
 
   - read()
+  - readRange()
   - readStep()
 
 - ### ServeoMotor
@@ -185,7 +186,14 @@ void loop()
 
 ## Versions
 
-### v0.0.13 (Current Stable version)
+### v0.0.14 (Current stable version)
+
+#### November, 2021
+
+* Fixed an issue with the Potentiometer class in mbed (Nano 33 BLE Sense)
+* Added readRange() method for the Potentiometer
+
+### v0.0.13 
 
 #### April, 2021
 
@@ -282,7 +290,7 @@ Based on previous work by:
 
 ## Current stable version
 
-**number:** v0.0.13
+**number:** v0.0.14
 
 **codename:** ananas
 

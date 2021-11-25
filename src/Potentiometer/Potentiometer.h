@@ -8,7 +8,7 @@ class Potentiometer: public AnalogInput
 {
 public:
     Potentiometer(uint8_t pin);
-    int read();
+    int readRange();
     int readStep(int steps);
 
 protected:
