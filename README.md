@@ -78,7 +78,7 @@ Arduino library for short introduction training workshops run by Arduino Educati
 
     - read()
 
-  - ### For outputs
+  - ### For outputs (this extends to LEDs)
 
     - isPWM()
     - write()
@@ -86,6 +86,7 @@ Arduino library for short introduction training workshops run by Arduino Educati
     - off()
     - blink()
     - state()
+  - *Note: construct an output with e.g. Led NAME(PIN) or Led NAME(PIN,NORMAL | INVERTED), this helps with common cathode LEDs* 
 
 - ### IMU
 
@@ -94,7 +95,7 @@ Arduino library for short introduction training workshops run by Arduino Educati
   - readGyroscope()
   - read()
 
-- ### LED
+- ### LED (besides all of the output functions)
 
   - brightness()
 
@@ -192,6 +193,7 @@ void loop()
 
 * Fixed an issue with the Potentiometer class in mbed (Nano 33 BLE Sense)
 * Added readRange() method for the Potentiometer
+* Added inverted logic for outputs and the constructor to have e.g. *Led led(PIN, NORMAL | INVERTED)* 
 
 ### v0.0.13 
 

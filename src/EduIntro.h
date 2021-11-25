@@ -115,8 +115,16 @@
  -----------------------------------------------------------------------------
  */
 
-/*        Minimum Analog In/Out that each platform have     */
+/*        Names of pins                                    */
 
+#define D21 21
+#define D20 20
+#define D19 19
+#define D18 18
+#define D17 17
+#define D16 16
+#define D15 15
+#define D14 14
 #define D13 13
 #define D12 12
 #define D11 11
@@ -132,6 +140,12 @@
 #define D1 1
 #define D0 0
 
+/*        Minimum Analog In/Out that each platform have     */
+
 #define ANALOG_MAX 1023
+
+/*        Possible types of outputs                         */
+#define NORMAL 0
+#define INVERTED 1
 
 #endif

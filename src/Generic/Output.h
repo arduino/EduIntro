@@ -7,6 +7,7 @@ class Output
 {
     public:
     Output (uint8_t _pin);
+    Output (uint8_t _pin, uint8_t _logic);
     void write(int value);
     inline int state() { return _state; }
     void on();
@@ -16,6 +17,7 @@ class Output
 
 protected:
     uint8_t pin;
+    uint8_t logic;
     int _state;
     boolean isPWM();
 };
