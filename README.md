@@ -187,7 +187,7 @@ void loop()
 
 ## Versions
 
-### v0.0.15 (Current stable version)
+### v0.0.16 (Current stable version)
 
 #### November, 2021
 
@@ -292,7 +292,7 @@ Based on previous work by:
 
 ## Current stable version
 
-**number:** v0.0.15
+**number:** v0.0.16
 
 **codename:** ananas
 
