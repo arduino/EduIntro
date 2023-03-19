@@ -8,7 +8,7 @@ ServoMotor::ServoMotor(uint8_t _pin)
   _attached = false;
 }
 
-int ServoMotor::write(uint8_t _value)
+void ServoMotor::write(uint8_t _value)
 {
   if (!_attached) {
     attach(pin);
