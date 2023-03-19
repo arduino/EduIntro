@@ -8,7 +8,7 @@ class ServoMotor : public Servo
 {
   public:
     ServoMotor(uint8_t _pin);
-    int write(uint8_t _value);
+    void write(uint8_t _value);
   private:
     int pin;
     boolean _attached;
